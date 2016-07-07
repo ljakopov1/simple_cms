@@ -33,8 +33,8 @@ class SubjectsController < ApplicationController
   end
 
   def edit
-  	  	@subject=Subject.find(params[:id])
-        @subject_count=Subject.count
+  	  @subject=Subject.find(params[:id])
+      @subject_count=Subject.count
   end
 
   def update
@@ -68,6 +68,7 @@ class SubjectsController < ApplicationController
   def subject_params
   	params.require(:subject).permit(:name, :position, :visible)
   end
+
 end
 
 
